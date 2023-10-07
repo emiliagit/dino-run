@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstacles;
+    [SerializeField] private float minY = -1.0f;
+    [SerializeField] private float maxY = 0.7f;
 
 
     void Start()
@@ -12,7 +14,7 @@ public class ObstacleSpawner : MonoBehaviour
         StartCoroutine(spawnobstacle());
     }
 
-   
+
 
     private IEnumerator spawnobstacle()
     {
@@ -24,9 +26,41 @@ public class ObstacleSpawner : MonoBehaviour
             float maxtime = 1.8f;
             float randomtime = Random.Range(mintime, maxtime);
 
-            Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+            //GameObject newObstacle = null; // Declara newObstacle fuera del bloque if
+
+            // Instantiate the obstacle
+            ////newObstacle = Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+
+            if (randomindex == obstacles.Length - 1)
+            {
+                Vector3 spawnPosition = transform.position;
+                spawnPosition.y = Random.Range(minY, maxY) * obstacles[randomindex].transform.localScale.y;
+                Instantiate(obstacles[randomindex], spawnPosition, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+            }
+
             yield return new WaitForSeconds(randomtime);
         }
+
+
+        //Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+
+        //if (randomindex == obstacles.Length - 1)
+        //{
+        //    Vector3 newPosition = newObstacle.transform.position;
+        //    newPosition.y = Random.Range(minY, maxY);
+        //    newObstacle.transform.position = newPosition;
+        //}
+        //else
+        //{
+        //    Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+        //}
+
+        //yield return new WaitForSeconds(randomtime);
+
 
     }
 

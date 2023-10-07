@@ -974,8 +974,8 @@ PolygonCollider2D:
       - {x: -0.44, y: -0.19}
       - {x: -0.38909674, y: -0.24226588}
       - {x: -0.31300354, y: -0.32954293}
-      - {x: -0.29783088, y: -0.4810848}
-      - {x: 0.19999999, y: -0.47}
+      - {x: -0.26552135, y: -0.47462294}
+      - {x: 0.14507455, y: -0.4796928}
       - {x: 0.16241837, y: -0.32996815}
       - {x: 0.26073885, y: -0.119609}
       - {x: 0.38102722, y: 0.043849945}
@@ -3066,6 +3066,8 @@ MonoBehaviour:
   - {fileID: 6988434336856673672, guid: 3d8253c20a543b447927ca75bb22f84b, type: 3}
   - {fileID: 8022166549546143167, guid: 3d85888f0b362cb44ad4869e6bf7e7d6, type: 3}
   - {fileID: 1766659363198449960, guid: 3891d634d70b7f540b0c172d16291320, type: 3}
+  minY: -1
+  maxY: 0.7
 --- !u!4 &1931414608
 Transform:
   m_ObjectHideFlags: 0
@@ -3499,7 +3501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 29.199966, y: -38.600006}
+  m_AnchoredPosition: {x: 29.199982, y: -38.600006}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097151280
