@@ -26,10 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
             float maxtime = 1.8f;
             float randomtime = Random.Range(mintime, maxtime);
 
-            //GameObject newObstacle = null; // Declara newObstacle fuera del bloque if
-
-            // Instantiate the obstacle
-            ////newObstacle = Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
+            
 
             if (randomindex == obstacles.Length - 1)
             {
@@ -44,22 +41,6 @@ public class ObstacleSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(randomtime);
         }
-
-
-        //Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
-
-        //if (randomindex == obstacles.Length - 1)
-        //{
-        //    Vector3 newPosition = newObstacle.transform.position;
-        //    newPosition.y = Random.Range(minY, maxY);
-        //    newObstacle.transform.position = newPosition;
-        //}
-        //else
-        //{
-        //    Instantiate(obstacles[randomindex], transform.position, Quaternion.identity);
-        //}
-
-        //yield return new WaitForSeconds(randomtime);
 
 
     }
