@@ -26,7 +26,6 @@ public class ObstacleSpawner : MonoBehaviour
             float maxtime = 1.8f;
             float randomtime = Random.Range(mintime, maxtime);
 
-            
 
             if (randomindex == obstacles.Length - 1)
             {
